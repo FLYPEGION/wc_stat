@@ -44,14 +44,14 @@
 
 # 依赖
 
-python>=3.8
-nodejs
-chinesecalendar [chinesecalendar库使用](https://github.com/LKI/chinese-calendar)
-pywencai [pywencai库使用](https://github.com/zsrl/pywencai)
-openpyxl
-PyExecJS
-PyYAML
-requests
-pyinstaller
-pandas
-...
+- python>=3.8
+- nodejs
+- chinesecalendar [chinesecalendar库使用](https://github.com/LKI/chinese-calendar)
+- pywencai [pywencai库使用](https://github.com/zsrl/pywencai)
+- openpyxl
+- PyExecJS
+- PyYAML
+- requests
+- pyinstaller
+- pandas
+- ...
