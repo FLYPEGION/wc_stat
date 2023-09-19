@@ -24,7 +24,7 @@ class Wencai:
         try:
             pro = True if cookie is not None else False
             res = pywencai.get(query=query, loop=True, pro=pro, cookie=cookie, request_params={ 'proxies': proxies})
-            return res['code'].tolist()
+            return res['code'].tolist() if res is not None else []
         except AttributeError:
            logger.error(f'问财接口状态异常,查询问句{query}')
            return []
