@@ -4,7 +4,7 @@ from utils import log
 from utils.log import logger
 from utils.load import load_config
 from utils.date import generate_dates, convert_querys
-from utils.get import Wencai, get_proxy
+from utils.query import Wencai, get_proxy
 from utils.write import write_excel
 
 if __name__ == '__main__':
@@ -21,8 +21,7 @@ if __name__ == '__main__':
                 cnt_ip += 1
                 proxy = get_proxy(configs['proxy_url'])
             querys = convert_querys(date,configs["querys"])
-            wc = Wencai()
-            stocks = wc.get(querys,configs["limits"],configs["cookie"],proxy)
+            stocks = Wencai().query(querys,configs["limits"],configs["cookie"],proxy)
             rows.append([f"{date.year}年{date.month}月{date.day}日", len(stocks)]+stocks)
         write_excel(configs["file_name"], content = rows, headers = [['日期','共计','分别是']])
     except BaseException as e:

@@ -43,5 +43,5 @@ class Wencai:
             stocks = stocks & set(limits)
         return list(stocks)
     
-    def get(self, querys:list, limits=None, cookie=None,proxies=None):
+    def query(self, querys:list, limits=None, cookie=None,proxies=None):
         return self._limit(self._poll(querys,cookie,proxies),limits)
